@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo bibliográfico de las unidades didácticas del Programa de Estudios de Desarrollo de Sistemas de Información del IESTP Luciano Castillo Colonna.">
+  <meta name="theme-color" content="#103a34">
+  <title>Biblioteca DSI | IESTP Luciano Castillo Colonna</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">DSI</span>
+        <span class="brand-copy">
+          <strong>Biblioteca Académica</strong>
+          <small>IESTP Luciano Castillo Colonna</small>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#unidades">Unidades</a>
+        <a href="#catalogo">Bibliografía</a>
+        <a href="#acerca">Acerca de</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Recursos académicos · 2026</p>
+          <h1>Conocimiento que impulsa<br><em>soluciones digitales.</em></h1>
+          <p class="hero-intro">Catálogo bibliográfico seleccionado para las unidades didácticas del Programa de Estudios de <strong>Desarrollo de Sistemas de Información</strong>.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#catalogo">Explorar bibliografía <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="#unidades">Ver unidades</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Resumen del catálogo">
+          <div class="panel-label">Catálogo institucional</div>
+          <div class="monogram" aria-hidden="true">
+            <span>DSI</span>
+            <i></i><i></i><i></i>
+          </div>
+          <div class="panel-metrics">
+            <div><strong id="hero-total">30</strong><span>Referencias</span></div>
+            <div><strong>03</strong><span>Unidades</span></div>
+            <div><strong>2026</strong><span>Periodo</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="units section-shell" id="unidades">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Rutas de aprendizaje</p>
+          <h2>Tres unidades, una visión integral</h2>
+        </div>
+        <p>Bibliografía organizada para acompañar el desarrollo técnico, desde la construcción de aplicaciones hasta la infraestructura y los datos.</p>
+      </div>
+
+      <div class="unit-grid">
+        <article class="unit-card mobile">
+          <div class="unit-top"><span>01</span><span class="unit-icon" aria-hidden="true">▣</span></div>
+          <h3>Desarrollo de Aplicaciones Móviles</h3>
+          <p>Arquitectura, modelado, patrones, calidad de software y desarrollo de soluciones móviles.</p>
+          <button class="text-link" data-jump-filter="moviles">Ver referencias <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="unit-card infrastructure">
+          <div class="unit-top"><span>02</span><span class="unit-icon" aria-hidden="true">⌁</span></div>
+          <h3>Arquitectura y Servicios de TI</h3>
+          <p>Hardware, mantenimiento, servidores, Linux, redes, seguridad, hosting y producción.</p>
+          <button class="text-link" data-jump-filter="servicios">Ver referencias <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="unit-card data">
+          <div class="unit-top"><span>03</span><span class="unit-icon" aria-hidden="true">◫</span></div>
+          <h3>Gestión de Bases de Datos</h3>
+          <p>Modelado relacional, SQL, administración, optimización, Data Warehouse y analítica.</p>
+          <button class="text-link" data-jump-filter="datos">Ver referencias <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-shell">
+        <div class="catalog-title">
+          <div>
+            <p class="section-kicker light">Colección académica</p>
+            <h2>Explora la bibliografía</h2>
+          </div>
+          <p>Busca por título, autor, código o temática y combina los filtros para encontrar la referencia que necesitas.</p>
+        </div>
+
+        <div class="filter-panel" role="search" aria-label="Filtros del catálogo">
+          <label class="search-field">
+            <span class="sr-only">Buscar bibliografía</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Buscar por título, autor, código o tema…" autocomplete="off">
+            <kbd>Ctrl K</kbd>
+          </label>
+
+          <div class="filter-row">
+            <div class="filter-group" aria-label="Filtrar por unidad didáctica">
+              <button class="filter-chip active" data-course="all" aria-pressed="true">Todas</button>
+              <button class="filter-chip" data-course="moviles" aria-pressed="false">Aplicaciones móviles</button>
+              <button class="filter-chip" data-course="servicios" aria-pressed="false">Servicios de TI</button>
+              <button class="filter-chip" data-course="datos" aria-pressed="false">Bases de datos</button>
+            </div>
+            <label class="select-wrap">
+              <span class="sr-only">Filtrar por tipo</span>
+              <select id="type-filter">
+                <option value="all">Bibliografía básica y complementaria</option>
+                <option value="basica">Solo bibliografía básica</option>
+                <option value="complementaria">Solo complementaria</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <p><strong id="result-count">30</strong> referencias encontradas</p>
+          <button id="clear-filters" type="button">Limpiar filtros</button>
+        </div>
+
+        <div class="book-grid" id="book-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No encontramos coincidencias</h3>
+          <p>Prueba con otro término o limpia los filtros seleccionados.</p>
+          <button class="button primary" id="empty-clear" type="button">Mostrar todo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="acerca">
+      <div class="about-mark" aria-hidden="true">LC</div>
+      <div>
+        <p class="section-kicker">Identidad académica</p>
+        <h2>Programa de Estudios de Desarrollo de Sistemas de Información</h2>
+      </div>
+      <p>Esta selección organiza los recursos disponibles en el inventario bibliográfico institucional para facilitar su consulta y vinculación con las unidades didácticas del periodo académico 2026-20.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-shell">
+      <div>
+        <strong>IESTP Luciano Castillo Colonna</strong>
+        <span>Talara · Piura · Perú</span>
+      </div>
+      <p>Programa de Estudios de Desarrollo de Sistemas de Información</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
